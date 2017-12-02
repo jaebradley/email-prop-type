@@ -18,15 +18,8 @@ describe('Email Prop Type Validation', () => {
       const props = {};
       props[propName] = email;
 
-      expect(() => emailPropType(props, propName, componentName))
-        .toThrow(`Invalid Email Prop Value: ${email} for ${propName} in ${componentName}`);
-      expect(isEmail.validate).toHaveBeenCalledTimes(1);
-      expect(isEmail.validate).toHaveBeenCalledWith(email);
-
-      isEmail.validate.mockClear();
-
-      expect(() => emailPropType(props, propName, componentName))
-        .toThrow(TypeError);
+      expect(emailPropType(props, propName, componentName))
+        .toEqual(new TypeError(`Invalid Email Prop Value: ${email} for ${propName} in ${componentName}`));
       expect(isEmail.validate).toHaveBeenCalledTimes(1);
       expect(isEmail.validate).toHaveBeenCalledWith(email);
     });
@@ -55,30 +48,16 @@ describe('Email Prop Type Validation', () => {
       const props = {};
       props[propName] = email;
 
-      expect(() => emailPropType.isRequired(props, propName, componentName))
-        .toThrow(`Invalid Email Prop Value: ${email} for ${propName} in ${componentName}`);
-      expect(isEmail.validate).toHaveBeenCalledTimes(1);
-      expect(isEmail.validate).toHaveBeenCalledWith(email);
-
-      isEmail.validate.mockClear();
-
-      expect(() => emailPropType.isRequired(props, propName, componentName))
-        .toThrow(TypeError);
+      expect(emailPropType.isRequired(props, propName, componentName))
+        .toEqual(new TypeError(`Invalid Email Prop Value: ${email} for ${propName} in ${componentName}`));
       expect(isEmail.validate).toHaveBeenCalledTimes(1);
       expect(isEmail.validate).toHaveBeenCalledWith(email);
     });
 
     it('should throw an error if prop is not defined', () => {
       const props = {};
-      expect(() => emailPropType.isRequired(props, propName, componentName))
-        .toThrow(`Invalid Email Prop Value: undefined for ${propName} in ${componentName}`);
-      expect(isEmail.validate).toHaveBeenCalledTimes(1);
-      expect(isEmail.validate).toHaveBeenCalledWith(undefined);
-
-      isEmail.validate.mockClear();
-
-      expect(() => emailPropType.isRequired(props, propName, componentName))
-        .toThrow(TypeError);
+      expect(emailPropType.isRequired(props, propName, componentName))
+        .toEqual(new TypeError(`Invalid Email Prop Value: undefined for ${propName} in ${componentName}`));
       expect(isEmail.validate).toHaveBeenCalledTimes(1);
       expect(isEmail.validate).toHaveBeenCalledWith(undefined);
     });
