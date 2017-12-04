@@ -58,8 +58,7 @@ describe('Email Prop Type Validation', () => {
       const props = {};
       expect(emailPropType.isRequired(props, propName, componentName))
         .toEqual(new TypeError(`Invalid Email Prop Value: undefined for ${propName} in ${componentName}`));
-      expect(isEmail.validate).toHaveBeenCalledTimes(1);
-      expect(isEmail.validate).toHaveBeenCalledWith(undefined);
+      expect(isEmail.validate).toHaveBeenCalledTimes(0);
     });
 
     it('should return null if prop value is a valid email', () => {
