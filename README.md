@@ -5,6 +5,8 @@
 
 # Email Prop Type
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/email-prop-type.svg)](https://greenkeeper.io/)
+
 ## Introduction
 This package is used to validate if a React Prop value is a valid email.
 
