@@ -24,6 +24,16 @@ describe('Email Prop Type Validation', () => {
       expect(isEmail.validate).toHaveBeenCalledWith(email);
     });
 
+    it('should throw an error if prop value is not a string', () => {
+      isEmail.validate = jest.fn().mockImplementation(() => false);
+      const props = {};
+      props[propName] = 1;
+
+      expect(emailPropType(props, propName, componentName))
+        .toEqual(new TypeError(`Invalid Email Prop Value: 1 for ${propName} in ${componentName}`));
+      expect(isEmail.validate).not.toHaveBeenCalled();
+    });
+
     it('should return null if prop is not defined', () => {
       const props = {};
 
@@ -52,6 +62,16 @@ describe('Email Prop Type Validation', () => {
         .toEqual(new TypeError(`Invalid Email Prop Value: ${email} for ${propName} in ${componentName}`));
       expect(isEmail.validate).toHaveBeenCalledTimes(1);
       expect(isEmail.validate).toHaveBeenCalledWith(email);
+    });
+
+    it('should throw an error if prop value is not a string', () => {
+      isEmail.validate = jest.fn().mockImplementation(() => false);
+      const props = {};
+      props[propName] = 1;
+
+      expect(emailPropType(props, propName, componentName))
+        .toEqual(new TypeError(`Invalid Email Prop Value: 1 for ${propName} in ${componentName}`));
+      expect(isEmail.validate).not.toHaveBeenCalled();
     });
 
     it('should throw an error if prop is not defined', () => {

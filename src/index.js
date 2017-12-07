@@ -3,7 +3,7 @@ import isEmail from 'isemail';
 const requiredEmailPropType = (props, propName, componentName) => {
   const value = props[propName];
 
-  if (value == null || !isEmail.validate(value)) {
+  if (value == null || typeof value !== 'string' || !isEmail.validate(value)) {
     return new TypeError(`Invalid Email Prop Value: ${value} for ${propName} in ${componentName}`);
   }
 
