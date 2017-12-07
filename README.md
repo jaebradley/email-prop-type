@@ -2,10 +2,9 @@
 [![codecov](https://codecov.io/gh/jaebradley/email-prop-type/branch/master/graph/badge.svg)](https://codecov.io/gh/jaebradley/email-prop-type)
 [![npm](https://img.shields.io/npm/dt/email-prop-type.svg)](https://www.npmjs.com/package/email-prop-type)
 [![npm](https://img.shields.io/npm/v/email-prop-type.svg)](https://www.npmjs.com/package/email-prop-type)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/email-prop-type.svg)](https://greenkeeper.io/)
 
 # Email Prop Type
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/email-prop-type.svg)](https://greenkeeper.io/)
 
 ## Introduction
 This package is used to validate if a React Prop value is a valid email.
