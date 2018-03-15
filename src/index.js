@@ -1,4 +1,4 @@
-import isEmail from 'isemail';
+import isEmail from 'isemail-es5';
 
 const requiredEmailPropType = (props, propName, componentName) => {
   const value = props[propName];
