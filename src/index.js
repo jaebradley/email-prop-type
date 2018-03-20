@@ -1,9 +1,9 @@
-import isEmail from 'isemail-es5';
+import EmailValidator from 'email-validator';
 
 const requiredEmailPropType = (props, propName, componentName) => {
   const value = props[propName];
 
-  if (value == null || typeof value !== 'string' || !isEmail.validate(value)) {
+  if (value == null || typeof value !== 'string' || !EmailValidator.validate(value)) {
     return new TypeError(`Invalid Email Prop Value: ${value} for ${propName} in ${componentName}`);
   }
 
