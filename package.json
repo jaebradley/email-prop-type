@@ -6,12 +6,13 @@
   "scripts": {
     "codecov": "codecov",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "compile": "babel -d build/ src/ --ignore node_modules,*.test.js",
+    "compile": "babel -d build/ src/ --delete-dir-on-start",
     "lint": "eslint --ext .js .",
-    "test": "jest --coverage",
+    "test": "jest src/ --coverage --no-cache",
     "prepublishOnly": "npm run compile",
     "semantic-commit": "commit",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -31,23 +32,23 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
     "@commitlint/cli": "^6.0.0",
     "@commitlint/config-angular": "^6.0.2",
     "@commitlint/prompt": "^6.0.0",
     "@commitlint/prompt-cli": "^6.0.1",
-    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^22.0.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2016": "^6.24.1",
-    "babel-preset-es2017": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "codecov": "^3.0.0",
+    "codecov": "^3.0.2",
     "eslint": "^4.12.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
     "jest": "^22.0.3",
-    "semantic-release": "^15.0.0"
+    "semantic-release": "^15.0.0",
+    "travis-deploy-once": "^5.0.0"
   },
   "dependencies": {
     "email-validator": "^2.0.0"
