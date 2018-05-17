@@ -6,9 +6,9 @@
   "scripts": {
     "codecov": "codecov",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "compile": "babel -d build/ src/ --ignore node_modules,*.test.js",
+    "compile": "babel -d build/ src/ --delete-dir-on-start",
     "lint": "eslint --ext .js .",
-    "test": "jest --coverage",
+    "test": "jest src/ --coverage --no-cache",
     "prepublishOnly": "npm run compile",
     "semantic-commit": "commit",
     "semantic-release": "semantic-release"

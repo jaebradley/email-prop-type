@@ -1,4 +1,9 @@
-
 {
-  "presets": ["es2015", "es2016", "stage-0"]
+  "presets": [
+    "@babel/env"
+  ],
+  "ignore": [
+    "node_modules/**",
+    "*.test.js"
+  ]
 }
