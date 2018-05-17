@@ -11,7 +11,8 @@
     "test": "jest src/ --coverage --no-cache",
     "prepublishOnly": "npm run compile",
     "semantic-commit": "commit",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,8 @@
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
     "jest": "^22.0.3",
-    "semantic-release": "^15.0.0"
+    "semantic-release": "^15.0.0",
+    "travis-deploy-once": "^5.0.0"
   },
   "dependencies": {
     "email-validator": "^2.0.0"
