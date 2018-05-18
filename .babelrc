@@ -1,9 +1,24 @@
 {
-  "presets": [
-    "@babel/preset-env"
-  ],
-  "ignore": [
-    "node_modules/**",
-    "*.test.js"
-  ]
-}
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            { "modules": "umd" }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            { "modules": false }
+          ]
+        ]
+      }
+    },
+    "ignore": [
+      "node_modules/**",
+      "*.test.js"
+    ]
+  }
