@@ -59,7 +59,7 @@
     "@commitlint/prompt": "^6.0.0",
     "@commitlint/prompt-cli": "^6.0.1",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^22.0.3",
+    "babel-jest": "^23.0.0",
     "codecov": "^3.0.2",
     "email-validator": "^2.0.0",
     "eslint": "^4.12.0",
