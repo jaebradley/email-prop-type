@@ -56,7 +56,7 @@
     "@babel/preset-env": "^7.0.0-beta.47",
     "@commitlint/cli": "^6.0.0",
     "@commitlint/config-angular": "^6.0.2",
-    "@commitlint/prompt": "^6.0.0",
+    "@commitlint/prompt": "^7.0.0",
     "@commitlint/prompt-cli": "^6.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.0.0",
