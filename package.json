@@ -46,9 +46,8 @@
       "<rootDir>/node_modules/"
     ]
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "email-validator": "^2.0.0"
+  "dependencies": {
+    "email-validator": "^2.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
@@ -61,7 +60,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.0.0",
     "codecov": "^3.0.2",
-    "email-validator": "^2.0.0",
     "eslint": "^5.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
