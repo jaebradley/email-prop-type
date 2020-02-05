@@ -1,10 +1,12 @@
-# `email-prop-type`
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/email-prop-type.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/jaebradley/email-prop-type.svg?branch=master)](https://travis-ci.org/jaebradley/email-prop-type)
 [![codecov](https://codecov.io/gh/jaebradley/email-prop-type/branch/master/graph/badge.svg)](https://codecov.io/gh/jaebradley/email-prop-type)
-[![npm](https://img.shields.io/npm/dt/email-prop-type.svg)](https://www.npmjs.com/package/email-prop-type)
 [![npm](https://img.shields.io/npm/v/email-prop-type.svg)](https://www.npmjs.com/package/email-prop-type)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/email-prop-type)
+[![npm-total-downloads](https://img.shields.io/npm/dt/email-prop-type.svg)](https://www.npmjs.com/package/email-prop-type)
+![GitHub](https://img.shields.io/github/license/jaebradley/email-prop-type)
+
+# `email-prop-type`
 
 ## Introduction
 
