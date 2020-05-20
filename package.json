@@ -52,7 +52,7 @@
     "@commitlint/prompt": "^8.3.5",
     "@commitlint/prompt-cli": "^8.3.5",
     "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^25.1.0",
     "codecov": "^3.6.5",
