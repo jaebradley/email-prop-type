@@ -1,9 +1,8 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import localResolve from 'rollup-plugin-local-resolve';
 import filesize from 'rollup-plugin-filesize';
-import minify from 'rollup-plugin-babel-minify';
 import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';
@@ -40,7 +39,7 @@ const config = {
   ],
   external: EXTERNAL,
   plugins: [
-    babel({ exclude: 'node_modules/**' }),
+    babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
     localResolve(),
     resolve({
       module: true,
@@ -50,7 +49,6 @@ const config = {
       browser: true,
       modulesOnly: true,
     }),
-    minify(),
     terser(),
     commonjs(),
     filesize(),
